@@ -32,7 +32,7 @@
   {
     "name": "Meal-Finder",
     "desc": "LA sleek and responsive React-based meal discovery app that fetches recipes from a public API. Users can search meals, view ingredients, and explore random recipes in seconds — perfect for food lovers!",
-    "image": "g-food_",
+    "image": "food",
     "category": "basicweb",
     "links": {
       "view": "https://meal-finder-drab.vercel.app/",
