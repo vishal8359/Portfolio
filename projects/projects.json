@@ -21,12 +21,12 @@
   },
   {
     "name": "Portfolio",
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis dolorem harum dolorum debitis.",
+    "desc": "🚀 Vishal | MERN Stack Developer : Building fast, clean & scalable web apps with MongoDB, Express, React, Node.js. I turn ideas into sleek, functional products—frontend to backend. Let's code something awesome.",
     "image": "portfolio",
     "category": "mern",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://portfolio-theta-azure-17.vercel.app/",
+      "code": "https://github.com/vishal8359/Portfolio"
     }
   },
   {
