@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Green Cart",
+    "desc": "Green Cart is a web-based grocery e-commerce platform offering a wide range of fresh products with easy online payment and order management.",
+    "image": "greencart",
+    "category": "mern",
+    "links": {
+      "view": "https://greencart-deploy-nkzn.vercel.app/",
+      "code": "https://github.com/vishal8359/greencart-deploy"
+    }
+  },
+  {
+    "name": "E-cart Api",
+    "desc": "A clean and modular RESTful API built with Express.js and MongoDB for powering e-commerce platforms. Handles everything from user auth to product, cart, and order management, ready to plug into any frontend.",
+    "image": "e_cart_api",
+    "category": "mern",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/vishal8359/E-cart-Api"
+    }
+  },
+  {
+    "name": "Portfolio",
+    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis dolorem harum dolorum debitis.",
+    "image": "portfolio",
+    "category": "mern",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Meal-Finder",
+    "desc": "LA sleek and responsive React-based meal discovery app that fetches recipes from a public API. Users can search meals, view ingredients, and explore random recipes in seconds — perfect for food lovers!",
+    "image": "g-food_",
+    "category": "basicweb",
+    "links": {
+      "view": "https://meal-finder-drab.vercel.app/",
+      "code": "https://github.com/vishal8359/Meal_finder"
+    }
+  },
+  
+  {
+    "name": "Movie Zone",
+    "desc": "MovieZone is a sleek React-based movie explorer app powered by live APIs. Instantly search movies, view detailed info, and explore trending titles — all in a lightning-fast, responsive UI.",
+    "image": "moviezone",
+    "category": "basicweb",
+    "links": {
+      "view": "https://movie-zone-sigma.vercel.app/",
+      "code": "https://github.com/vishal8359/MovieZone"
+    }
+  },
+  {
+    "name": "Pixa-bay clone",
+    "desc": "A lightning-fast image search app that brings stunning visuals to your fingertips. Built with React, powered by image APIs, and designed for a smooth, minimal experience.",
+    "image": "pixa",
+    "category": "mern",
+    "links": {
+      "view": "https://pixabay-clone-gold.vercel.app/",
+      "code": "https://github.com/vishal8359/Pixabay_clone"
+    }
+  },
+  {
+    "name": "Password Generator",
+    "desc": "A sleek, secure, and customizable password generator that creates strong passwords in a single click. Built with React for speed and interactivity.",
+    "image": "pass",
+    "category": "mern",
+    "links": {
+      "view": "https://password-generator-nu-five-16.vercel.app/",
+      "code": "https://github.com/vishal8359/Password-generator"
+    }
+  },
+  {
+    "name": "Tic tac toe",
+    "desc": "A sleek, fast, and fully functional Tic Tac Toe game made without any frameworks – just clean, vanilla code.",
+    "image": "tic",
+    "category": "basicweb",
+    "links": {
+      "view": "https://tic-tac-toe-wheat-omega-52.vercel.app/",
+      "code": " https://github.com/vishal8359/Tic-tac-toe"
+    }
+  }
+
+]
