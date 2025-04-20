@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
@@ -17,75 +16,82 @@ $(document).ready(function () {
     });
 });
 
-document.addEventListener('visibilitychange',
-    function () {
-        if (document.visibilityState === "visible") {
-            document.title = "Projects | Portfolio Vishal";
-            $("#favicon").attr("href", "/assets/images/favicon.png");
-        }
-        else {
-            document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "/assets/images/favhand.png");
-        }
-    });
+document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === "visible") {
+        document.title = "Projects | Portfolio Vishal";
+        $("#favicon").attr("href", "/assets/images/favicon.png");
+    } else {
+        document.title = "Come Back To Portfolio";
+        $("#favicon").attr("href", "/assets/images/favhand.png");
+    }
+});
 
-
-// fetch projects start
+// Fetch projects start
 async function getProjects() {
-    const response = await fetch("projects.json");
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch("projects.json");
+        if (!response.ok) {
+            throw new Error('Failed to fetch the projects.json file');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
-
-
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector(".work .box-container");
     let projectsHTML = "";
-    projects.forEach(project => {
-        projectsHTML += `
-        <div class="grid-item ${project.category}">
-        <div class="box tilt" style="width: 380px; margin: 1rem">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>`
-    });
-    projectsContainer.innerHTML = projectsHTML;
 
-    // isotope filter products
-    var $grid = $('.box-container').isotope({
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows',
-        masonry: {
-            columnWidth: 200
-        }
-    });
+    if (projects && projects.length) {
+        projects.forEach(project => {
+            projectsHTML += `
+            <div class="grid-item ${project.category}">
+                <div class="box tilt" style="width: 380px; margin: 1rem">
+                    <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
+                    <div class="content">
+                        <div class="tag">
+                            <h3>${project.name}</h3>
+                        </div>
+                        <div class="desc">
+                            <p>${project.desc}</p>
+                            <div class="btns">
+                                <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+                                <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        });
+        projectsContainer.innerHTML = projectsHTML;
 
-    // filter items on button click
-    $('.button-group').on('click', 'button', function () {
-        $('.button-group').find('.is-checked').removeClass('is-checked');
-        $(this).addClass('is-checked');
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-    });
+        // Isotope filter products
+        var $grid = $('.box-container').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows',
+            masonry: {
+                columnWidth: 200
+            }
+        });
+
+        // Filter items on button click
+        $('.button-group').on('click', 'button', function () {
+            $('.button-group').find('.is-checked').removeClass('is-checked');
+            $(this).addClass('is-checked');
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
+    } else {
+        console.log("No projects found or an error occurred.");
+    }
 }
 
 getProjects().then(data => {
     showProjects(data);
-})
-// fetch projects end
+});
+// Fetch projects end
 
 // Start of Tawk.to Live Chat
 var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
@@ -99,7 +105,7 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 })();
 // End of Tawk.to Live Chat
 
-// disable developer mode
+// Disable developer mode
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
         return false;
