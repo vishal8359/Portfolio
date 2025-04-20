@@ -31,13 +31,12 @@ document.addEventListener('visibilitychange',
 
 
 // fetch projects start
-function getProjects() {
-    return fetch("projects.json")
-        .then(response => response.json())
-        .then(data => {
-            return data
-        });
+async function getProjects() {
+    const response = await fetch("projects.json");
+    const data = await response.json();
+    return data;
 }
+
 
 
 function showProjects(projects) {
