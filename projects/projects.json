@@ -1,5 +1,15 @@
 [
   {
+    "name": "Sangam",
+    "desc": "Sangam is a comprehensive community platform connecting residents and local businesses. It offers real-time chat, short-form video sharing, and a hyperlocal e-commerce module for local firms to sell directly to residents.",
+    "image": "sangam",
+    "category": "mern",
+    "links": {
+      "view": "https://sangam-frontend-492o.onrender.com/",
+      "code": "https://github.com/vishal8359/Sangam"
+    }
+  },
+  {
     "name": "Green Cart",
     "desc": "Green Cart is a web-based grocery e-commerce platform offering a wide range of fresh products with easy online payment and order management.",
     "image": "greencart",
