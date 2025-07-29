@@ -1,7 +1,7 @@
 [
   {
     "name": "Sangam",
-    "desc": "Sangam is a comprehensive community platform connecting residents and local businesses. It offers real-time chat, short-form video sharing, and a hyperlocal e-commerce module for local firms to sell directly to residents.",
+    "desc": "Sangam is a community platform seamlessly connecting residents with local businesses. It features real-time chat, short-form video, and hyperlocal e-commerce for direct local sales.",
     "image": "sangam",
     "category": "mern",
     "links": {
